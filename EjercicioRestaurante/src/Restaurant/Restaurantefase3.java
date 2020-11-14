@@ -125,9 +125,9 @@ public class Restaurantefase3 {
 
 	}
 
-	private static boolean equalsIgnoreCase(String string) {
+	/*private static boolean equalsIgnoreCase(String string) {
 		// TODO Auto-generated method stub
 		return false;
-	}
+	}*/
 
 }
