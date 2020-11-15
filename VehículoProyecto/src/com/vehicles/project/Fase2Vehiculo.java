@@ -33,13 +33,12 @@ public class Fase2Vehiculo {
 		double diame = in.getDouble("Diametro:     ");
 		Wheel ruedas = new Wheel(marcrueda, diame);
 		e.close();
-		// añadir 2 ruedas delanteras al coche
-		frontWheels.add(ruedas);
-		frontWheels.add(ruedas);
+		// AÑDIENDO LAS RUEDAS TRASERAS Y ELANTERAS AL ARRAY
+		for (int i = 0; i < 2; i++) {
+			backWheels.add(ruedas);
+			frontWheels.add(ruedas);
+		}
 		System.out.println("Añadida: " + frontWheels.size() + " ruedas delanteras a tu coche");
-		// añadir 2 ruedas traseras al coche
-		backWheels.add(ruedas);
-		backWheels.add(ruedas);
 		System.out.println("Añadida: " + backWheels.size() + " ruedas traseras a tu coche");
 
 		n.addWheels(frontWheels, backWheels);

@@ -22,7 +22,7 @@ public class VehicleControl {
 		while (c2.equals("")) {
 			System.out.print(placacorrecta);
 			c2 = scanner.next();
-			if (!c2.matches("([0-9]{4,5})([A-Z]{2,4})")) {
+			if (!c2.matches("[0-9]{4}+[A-Z]{2,3}")){ 
 				c2 = "";
 			}
 		}
@@ -43,4 +43,8 @@ public class VehicleControl {
 		return c1;
 	}
 
-}
+}//if (!c1.matches("[0-9]{4}+[A-Z]{2,3}")){
+//c1="";
+
+
+//}

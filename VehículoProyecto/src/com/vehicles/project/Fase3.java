@@ -37,25 +37,26 @@ public class Fase3 {
 
 					// que acepte el diametro de 0.4 hasta 4
 					double diame = in.getDouble("Diametro:          ");
-
+					int c = 0;
 					Wheel ruedas = new Wheel(marcrueda, diame);
-
-					frontWheels.add(ruedas);
-					frontWheels.add(ruedas);
-					System.out.println("Añadida: " + frontWheels.size() + " ruedas delanteras a tu coche");
-					backWheels.add(ruedas);
-					backWheels.add(ruedas);
-					System.out.println("Añadida: " + backWheels.size() + " ruedas traseras a tu coche");
+					// añadiendo ruedas delanteras y traseras
+					for (int i = 0; i < 2; i++) {
+						backWheels.add(ruedas);
+						frontWheels.add(ruedas);
+						c = i + 1;
+					}
+					System.out.println("Añadida: " + c + " ruedas delanteras a tu coche");
+					System.out.println("Añadida: " + c + " ruedas traseras a tu coche");
 
 					n.addWheels(frontWheels, backWheels);
-					frontWheels.removeAll(frontWheels);
+					(frontWheels).removeAll(frontWheels);
 					backWheels.removeAll(backWheels);
 					n.rodar();
 					System.out.println(n + "  marca de ruedas: " + ruedas.getMarcarueda() + "  Diametro de tus ruedas: "
 							+ ruedas.getDiámetro());
 
 				}
-
+                //CREANDO MOTO
 				if (opcion == 2) {
 					System.out.println("    HAS CREADO UNA MOTO    ");
 
@@ -69,11 +70,14 @@ public class Fase3 {
 					System.out.print("Marca de ruedas :   ");
 					String marcrueda = e.next();
 					double diame = in.getDouble("Diametro:     ");
-
 					Wheel ruedas = new Wheel(marcrueda, diame);
-					wheels.add(ruedas);
-					wheels.add(ruedas);
-					System.out.println("Añadida: " + wheels.size() + " ruedas a tu moto");
+					//AÑADIENDO AL ARRAY LAS RUEDAS DE LA MOTO
+					int c = 0;
+					for (int i = 0; i < 2; i++) {
+						wheels.add(ruedas);
+						c = i + 1;
+					}
+					System.out.println("Añadida: " + c + " ruedas a tu moto");
 					n.addTwoWheels(wheels);
 					wheels.removeAll(wheels);
 					n.rodar();
